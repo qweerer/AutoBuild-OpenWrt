@@ -80,30 +80,7 @@ jobs:
         git clone https://github.com/lisaac/luci-app-dockerman.git package/dockerman
         git clone https://github.com/kenzok8/openwrt-packages.git package/kenzok8
         git clone https://github.com/openwrt/luci.git package/luciopenwrt
-        git clone https://github.com/Lienol/openwrt-package.git package/Lienol2
-        git clone https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk.git package/mentohust
-        git clone https://github.com/BoringCat/luci-app-mentohust.git package/luci/mentohust
-        git clone https://github.com/animefansxj/luci-app-smartinfo.git package/luci/smartinfo
-        git clone https://github.com/msylgj/luci-app-tencentddns.git package/luci/tencentddns
-        git clone https://github.com/ntlf9t/luci-app-dnspod.git package/luci/dnspod
-        git clone https://github.com/AlexZhuo/luci-app-bandwidthd.git package/bandwidthd
-        git clone https://github.com/destan19/OpenAppFilter.git package/luci/OpenAppFilter
-        git clone https://github.com/rufengsuixing/luci-app-onliner.git package/luci/onliner
-
-    - name: 自定义插件主题。
-      working-directory: ./openwrt
-      run: |
-        git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git package/theme/atmaterial
-        git clone https://github.com/rosywrt/luci-theme-rosy package/theme/rosy
-        git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git package/theme/infinityfreedom
-        git clone https://github.com/apollo-ng/luci-theme-darkmatter.git package/theme/darkmatter
-
-    - name: Update & Install feeds2
-      working-directory: ./openwrt
-      run: |
-        ./scripts/feeds update -a
-        ./scripts/feeds install -a
-        ./scripts/feeds install -a
+    #    git clone "your_github_link" package/"your_folder_name"      
 
     - name: Configuration Customization - Build_x86_64
       env:
