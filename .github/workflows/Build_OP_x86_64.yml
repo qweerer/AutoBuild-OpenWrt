@@ -79,7 +79,12 @@ jobs:
         git clone https://github.com/xiaorouji/openwrt-passwall.git package/lienol
         git clone https://github.com/lisaac/luci-app-dockerman.git package/dockerman
         git clone https://github.com/kenzok8/openwrt-packages.git package/kenzok8
+        git clone https://github.com/animefansxj/luci-app-smartinfo.git package/luci/smartinfo
+        git clone https://github.com/Lienol/openwrt-package.git package/Lienol2
         git clone https://github.com/openwrt/luci.git package/luciopenwrt
+        git clone https://github.com/AlexZhuo/luci-app-bandwidthd.git package/bandwidthd
+        git clone https://github.com/destan19/OpenAppFilter.git package/luci/OpenAppFilter
+        git clone https://github.com/rufengsuixing/luci-app-onliner.git package/luci/onliner
     #    git clone "your_github_link" package/"your_folder_name"      
 
     - name: Configuration Customization - Build_x86_64
