@@ -85,6 +85,7 @@ jobs:
         git clone https://github.com/AlexZhuo/luci-app-bandwidthd.git package/bandwidthd
         git clone https://github.com/destan19/OpenAppFilter.git package/luci/OpenAppFilter
         git clone https://github.com/rufengsuixing/luci-app-onliner.git package/luci/onliner
+        git clone https://github.com/Kiougar/luci-wrtbwmon.git package/wrtbwmon
     #    git clone "your_github_link" package/"your_folder_name"      
 
     - name: Configuration Customization - Build_x86_64
@@ -113,3 +114,9 @@ jobs:
       with:
         name: OpenWrt
         path: openwrt/bin
+
+    - name : Upload X86-artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: OpenWrt
+        path: openwrt/bin/targets/x86/64/openwrt-x86-64-generic-squashfs-combined-efi.img.gz
